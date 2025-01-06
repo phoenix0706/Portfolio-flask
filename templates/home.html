@@ -12,6 +12,23 @@
         <p>{{ person.description }}</p>
     </div>
 
+    <!-- Skills Section -->
+    <section id="skills" class="mt-5">
+        <h2 class="text-center mb-4">Skills</h2>
+        <div class="row">
+            {% for skill in person.skills %}
+            <div class="col-md-3 col-sm-6 mb-4 text-center">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <img src="{{ skill.icon }}" alt="{{ skill.name }}" class="img-fluid mb-2" style="height: 50px;">
+                        <h6 class="card-title">{{ skill.name }}</h6>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
     <!-- Education and Experience Section -->
     <div class="row">
         <!-- Education -->
